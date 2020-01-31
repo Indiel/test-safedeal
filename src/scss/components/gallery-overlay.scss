@@ -1,0 +1,122 @@
+.gallery-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-overlay__preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+
+.gallery-overlay__close {
+    @include reset-button;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    padding-top: 0;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    cursor: pointer;
+}
+
+.gallery-overlay__comments {
+    margin: 25px 22px 0;
+}
+
+.gallery-overlay__comment {
+    margin: 15px 0;
+}
+
+.gallery-overlay__date {
+    margin: 0;
+    color: #999999;
+}
+
+.gallery-overlay__text {
+    margin: 5px 0 0 0;
+}
+
+.gallery-overlay__form {
+    margin: 40px 22px;
+}
+
+.gallery-overlay__input {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    width: 100%;
+    height: 30px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.gallery-overlay__form-submit {
+    @include reset-button;
+
+    width: 100%;
+    height: 30px;
+
+    text-align: center;
+    color: #ffffff;
+    background-color: #4997D0;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+        background-color: rgb(120, 192, 243);
+    }
+}
+
+@media (min-width: 450px) {
+    .gallery-overlay__preview {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 70%;
+        min-height: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    .gallery-overlay__preview {
+        box-sizing: border-box;
+        padding: 30px;
+        width: 620px;
+
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gallery-overlay__image {
+        width: 60%;
+    }
+
+    .gallery-overlay__comments {
+        margin: 0;
+        padding: 0 15px;
+        width: 30%;
+    }
+
+    .gallery-overlay__comment:first-child {
+        margin-top: 0;
+    }
+
+    .gallery-overlay__form {
+        width: 60%;
+        margin: 40px 0 0;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание Safedeal Frontend Trainee</title>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <h1 class="header__title">Test APP</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="gallery">
+            <div class="wrapper gallery__wrapper">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper footer__wrapper">
+            <hr>
+            <p class="footer__years">© 2018-2019</p class="wrapper">
+        </div>
+    </footer>
+
+    <div class="gallery-overlay visually-hidden">
+        <div class="gallery-overlay__preview">
+            <button class="gallery-overlay__close">&times;</button>
+            <img class="gallery-overlay__image" src="https://boiling-refuge-66454.herokuapp.com/images/237" alt="">
+            <div class="gallery-overlay__comments"></div>
+            <form class="gallery-overlay__form" name="comment" action="index.html" method="post" autocomplete="off">
+                <input class="gallery-overlay__input" type="text" name="name" placeholder="Ваше имя">
+                <input class="gallery-overlay__input" type="text" name="comment" placeholder="Ваш комментарий">
+                <input class="gallery-overlay__form-submit" type="submit" value="Оставить комментарий">
+            </form>
+        </div>
+
+        <template id="comment-template">
+            <div class="gallery-overlay__comment">
+                <p class="gallery-overlay__date"></p>
+                <p class="gallery-overlay__text"></p>
+            </div>
+        </template>
+    </div>
+
+    <template id="image-template">
+        <a href="" class="gallery__link">
+            <img class="gallery__image" src="">
+        </a>
+    </template>
+</body>
+</html>
